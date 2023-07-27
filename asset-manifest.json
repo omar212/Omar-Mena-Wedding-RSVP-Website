@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/omar-mena-rsvp-website/static/css/main.7818043e.css",
+    "main.js": "/omar-mena-rsvp-website/static/js/main.fa1a2d5f.js",
+    "static/js/787.c4bb0428.chunk.js": "/omar-mena-rsvp-website/static/js/787.c4bb0428.chunk.js",
+    "index.html": "/omar-mena-rsvp-website/index.html",
+    "main.7818043e.css.map": "/omar-mena-rsvp-website/static/css/main.7818043e.css.map",
+    "main.fa1a2d5f.js.map": "/omar-mena-rsvp-website/static/js/main.fa1a2d5f.js.map",
+    "787.c4bb0428.chunk.js.map": "/omar-mena-rsvp-website/static/js/787.c4bb0428.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7818043e.css",
+    "static/js/main.fa1a2d5f.js"
+  ]
+}
