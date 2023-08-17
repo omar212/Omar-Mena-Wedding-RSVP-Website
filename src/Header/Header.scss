@@ -7,9 +7,9 @@
     align-items: center;
     height: 10vh;
     width: 100%;
-    background-color: #ffeaa7;
-    background-image: linear-gradient(315deg, #ffeaa7 0%, #000000 74%);
-    border-bottom: 2px solid silver;
+    background-color: rgb(250,240,230);
+    // background-image: linear-gradient(315deg, #ffeaa7 0%, #000000 74%);
+    border-bottom: 2px solid transparent;
     font-family: 'Wedding';
     font-weight: normal;
     font-style: normal;
@@ -20,8 +20,8 @@
     .header-title {
         font-size: 1.5rem;
         font-weight: bold;
-        color: #f9d29d;
-        text-shadow: 2px 2px 2px #000000;
+        color: black;
+        // text-shadow: 2px 2px 2px #000000;
         text-align: center;
     }
     
