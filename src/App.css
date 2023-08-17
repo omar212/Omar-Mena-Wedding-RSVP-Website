@@ -33,14 +33,6 @@ body {
 .App {
   text-align: center;
   width: 100%;
-  /* border: 3px solid silver; */
-  
-  /* Remove flex properties that cause unnecessary overflow */
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%; */
   overflow-y: scroll; /* Enable vertical scrolling */
   max-height: 100vh; /* Limit the maximum height to the viewport height */
-  /* padding: 20px; Add some spacing to the sides */
 }
