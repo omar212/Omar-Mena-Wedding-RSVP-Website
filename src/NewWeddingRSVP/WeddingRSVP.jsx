@@ -25,6 +25,7 @@ const WeddingRSVP = () => {
           <Address title="Address" address="The Tides Estate, 1245 Belmont Ave, North Haledon, NJ 07508" />
         </div>
       </div>
+      <hr className="hr-component swiggly-line"/>
     </div>
   );
 };

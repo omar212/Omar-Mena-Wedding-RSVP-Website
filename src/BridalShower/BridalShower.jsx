@@ -25,6 +25,7 @@ const BridalShowerRSVP = () => {
           <Address title="Address" address="1420 Drumgoole Road East, Staten Island, 10312" />
         </div>
       </div>
+      <hr className="hr-component swiggly-line"/>
     </div>
   );
 };

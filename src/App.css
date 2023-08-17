@@ -8,6 +8,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'EventHeader';
+  src: url('./fonts/YsabeauInfant-Italic-VariableFont_wght.ttf') format('truetype'),
+       url('./fonts/YsabeauInfant-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   font-family: 'Wedding';

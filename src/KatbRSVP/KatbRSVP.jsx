@@ -25,6 +25,7 @@ const KatbRSVP = () => {
           <Address title="Address" address="Miraj Islamic School" />
         </div>
       </div>
+      <hr className="hr-component swiggly-line"/>
     </div>
   );
 };
