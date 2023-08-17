@@ -1,0 +1,76 @@
+// create a header.scss styles
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    background-color: #ffeaa7;
+    background-image: linear-gradient(315deg, #ffeaa7 0%, #000000 74%);
+    border-bottom: 2px solid silver;
+    font-family: 'Wedding';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1rem;
+    padding: 0 1rem;
+    text-align: center;
+    
+    .header-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #f9d29d;
+        text-shadow: 2px 2px 2px #000000;
+        text-align: center;
+    }
+    
+    .header-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 30%;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #f9d29d;
+        text-shadow: 2px 2px 2px #000000;
+    
+        .header-link {
+        text-decoration: none;
+        color: #f9d29d;
+        text-shadow: 2px 2px 2px #000000;
+        }
+    }
+    
+    .header-link:hover {
+        color: #f9d29d;
+        text-shadow: 2px 2px 2px #000000;
+    }
+    
+    .header-link:active {
+        color: #f9d29d;
+        text-shadow: 2px 2px 2px #000000;
+    }
+    
+    .header-link:focus {
+        color: #f9d29d;
+        text-shadow: 2px 2px 2px #000000;
+    }
+    
+    .header-link:visited {
+        color: #f9d29d;
+        text-shadow: 2px 2px 2px #000000;
+    }
+    
+    .header-link:link {
+        color: #f9d29d;
+        text-shadow: 2px 2px 2px #000000;
+    }
+    
+    .header-link:after {
+        color: #f9d29d;
+        text-shadow: 2px 2px 2px #000000;
+    }
+
+}
