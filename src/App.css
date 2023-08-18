@@ -16,13 +16,22 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'WeddingHeader';
+  src: url('./fonts/PlantinInfantMTStd.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   font-family: 'Wedding';
   /* margin-top: 1em; */
   margin-bottom: 1em;
-  background-color: #ffeaa7;
-  background-image: linear-gradient(315deg, #ffeaa7 0%, #000000 74%);
+  /* background-color: #ffeaa7;
+  background-image: linear-gradient(315deg, #ffeaa7 0%, #000000 74%); */
+  background-color: #FAF0E6;
+  background-image: linear-gradient(315deg, #f9d29d 0%, #ffd8cb 74%);
   /* Set body height to 100vh to take up the full viewport height */
   height: 100vh;
   width: 100%;
@@ -42,5 +51,6 @@ body {
   text-align: center;
   width: 100%;
   overflow-y: scroll; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Disable horizontal scrolling */
   max-height: 100vh; /* Limit the maximum height to the viewport height */
 }

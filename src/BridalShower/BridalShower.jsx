@@ -5,6 +5,7 @@ import DateComponent from '../Components/DateComponent';
 import Address from '../Components/Address';
 import Title from '../Components/Title';
 import Attendance from '../Components/Attendance';
+import fancyline2 from '../assets/fancyline2.png';
 import './BridalShower.scss'; // Import your global styles here
 
 const BridalShowerRSVP = () => {
@@ -25,7 +26,9 @@ const BridalShowerRSVP = () => {
           <Address title="Address" address="1420 Drumgoole Road East, Staten Island, 10312" />
         </div>
       </div>
-      <hr className="hr-component swiggly-line"/>
+      <div className='image-container'>
+        <img src={fancyline2} alt="fancy line" className="fancy-line-image" />
+      </div>
     </div>
   );
 };

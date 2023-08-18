@@ -5,6 +5,7 @@ import DateComponent from '../Components/DateComponent';
 import Address from '../Components/Address';
 import Title from '../Components/Title';
 import Attendance from '../Components/Attendance';
+import fancyline2 from '../assets/fancyline2.png';
 import './Katb.css'; // Import your global styles here
 
 const KatbRSVP = () => {
@@ -25,7 +26,9 @@ const KatbRSVP = () => {
           <Address title="Address" address="Miraj Islamic School" />
         </div>
       </div>
-      <hr className="hr-component swiggly-line"/>
+      <div className='image-container'>
+        <img src={fancyline2} alt="fancy line" className="fancy-line-image" />
+      </div>
     </div>
   );
 };

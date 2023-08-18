@@ -7,7 +7,8 @@
   height: 100%;
   width: 100%;
   border: 0.5px solid transparent;
-  // margin-top: 2em;
+  background-color: #FAF0E6;
+  background-image: linear-gradient(315deg, #f9d29d 0%, #ffd8cb 74%);
   font-family: 'Wedding';
   
   .hr-component {
@@ -18,60 +19,35 @@
       margin: 0 auto; 
   }
 
-  .swiggly-line {
-    position: relative;
-    height: 5px;
-    background: transparent;
-    margin: 0 auto;
+  .image-container {
+    margin-top: -80px;
+    margin-bottom: -50px;
   }
-  
-  .swiggly-line::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 5px,
-      black 20px,
-      gold 20px
-    );
-    transform: translateX(-5px);
-    animation: swiggle 3s linear infinite;
-  }
-  
-  @keyframes swiggle {
-    0% {
-      transform: translateX(-5px);
-    }
-    100% {
-      transform: translateX(5px);
+  .fancy-line-image {
+    width: 11%;
+
+    @media (max-width: 768px) {
+      width: 50%;
     }
   }
 
-  &.wedding-component {
-    // background-color: #f9d29d;
-    background-color: #FAF0E6;
-    background-image: linear-gradient(315deg, #f9d29d 0%, #ffd8cb 74%);
-  }
+  
+ 
 
-  &.katb-component {
-    background-color: #FAF0E6;
-    background-image: linear-gradient(315deg, #f9d29d 0%, #ffd8cb 74%);
-    // background-image: linear-gradient(315deg, #FAF0E6, 0%, #efefef 74%);
-  }
+  // &.wedding-component {
+  //   background-color: #FAF0E6;
+  //   background-image: linear-gradient(315deg, #f9d29d 0%, #ffd8cb 74%);
+  // }
 
-  &.bridal-shower-component {
-    // background-color: #f9d29d;
-    background-color: #FAF0E6;
-    background-image: linear-gradient(315deg, #f9d29d 0%, #ffd8cb 74%);
-    // background-image: linear-gradient(315deg, #f9d29d 0%, #ffd8cb 74%);
-    // background-color: #f9c5d1;
-    // background-image: linear-gradient(315deg, #f9c5d1 0%, #9795ef 74%) !important;
-  }
+  // &.katb-component {
+  //   background-color: #FAF0E6;
+  //   background-image: linear-gradient(315deg, #f9d29d 0%, #ffd8cb 74%);
+  // }
+
+  // &.bridal-shower-component {
+  //   background-color: #FAF0E6;
+  //   background-image: linear-gradient(315deg, #f9d29d 0%, #ffd8cb 74%);
+  // }
 
   .component-container {
     display: flex;
@@ -81,7 +57,7 @@
     width: 100%;
     height: 100%;
     
-    font-family: 'Wedding';
+    font-family: 'WeddingHeader', sans-serif;
     font-weight: normal;
     font-style: normal;
     
@@ -91,21 +67,19 @@
 
     }
 
-    .date-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    // .date-container {
+    //   display: flex;
+    //   flex-direction: column;
+    //   justify-content: center;
+    //   align-items: center;
 
-      @media (max-width: 768px) {
-        width: 100%;
-      }
-    }
+    //   @media (max-width: 768px) {
+    //     width: 100%;
+    //   }
+    // }
 
     .attendance-component {
 
-      
-  
         .form {
           display: flex;
           flex-direction: column;
@@ -117,39 +91,7 @@
           
         }
         
-        /* Add space between each guest item */
-        .guest-list {
-          margin-top: 20px;
-          text-align: left;
-          width: 100%;
-        }
         
-        .guest-item {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          margin-bottom: 10px;
-        }
-        
-        .guest-item button {
-          padding: 4px;
-          min-width: 0;
-        }
-        
-        /* Add space between buttons */
-        .form button {
-          margin-top: 10px;
-        }
-        
-        /* Add space between input fields */
-        .form .MuiTextField-root {
-          margin-bottom: 10px;
-        }
-        
-        .css-5lbw0b-MuiTypography-root {
-          margin-bottom: 5% !important;
-        }
-      
 
       .attend-button,
         .not-attend-button {
@@ -160,12 +102,10 @@
           border: 2px solid black;
           cursor: pointer;
         }
-
-      
+    
     }
 
-    
-
+  
     &.vertical {
       width: 100%;
       flex-direction: column;
@@ -190,50 +130,84 @@
     }
     
     .component-title {
-      font-family: 'EventHeader', sans-serif;
+      font-family: 'WeddingHeader', sans-serif;
       font-size: 1.5rem;
       font-weight: 600;
       margin-bottom: 0.5rem; /* Adjust margin to bring title closer to text */
 
       &.header {
-        font-size: 2.5rem;
-        font-weight: 600;
+        font-size: 3.5rem;
+        font-weight: 100;
         margin-bottom: 1.5rem; /* Adjust margin to bring title closer to text */
+
+        @media (max-width: 768px) {
+          padding: 6%;
+          font-size: 2.5rem;
+        }
       }
     }
   
     .component {
       display: flex;
-      height: 100%;
+      height: fit-content;
       width: 100%;
       padding: 1rem;
       box-sizing: border-box;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      
+      // overflow-y: scroll;
 
       &:hover {
         // background-color: #f5f5f5; /* Keep the background color unchanged */
         cursor: pointer; /* Show pointer cursor on hover */
         
         .component-title {
-          opacity: 0.7; /* Reduce the opacity of the title on hover */
-          color: blue;
+          opacity: 0.3; /* Reduce the opacity of the title on hover */
+          // color: blue;
+        }
+
+        .component-text {
+          opacity: 0.3; /* Reduce the opacity of the text on hover */
         }
       }
+
+      .hosted-by-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+      }
+
+      .date-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+
+      .address-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+
   
       .component-title {
         font-family: inherit;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-weight: 600;
-        margin-bottom: 0.5rem; /* Adjust margin to bring title closer to text */
+        margin-bottom: 2.5rem; /* Adjust margin to bring title closer to text */
       }
   
       .component-text {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         font-weight: 500;
-        margin-bottom: 0; /* Remove margin to eliminate extra spacing */
+        margin-top: 3.5rem;
+        margin-bottom: 2.5rem; /* Remove margin to eliminate extra spacing */
       }
 
       
@@ -241,4 +215,45 @@
 
 }
   
+}
+
+
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+  height: fit-content;
+}
+
+/* Add space between each guest item */
+.guest-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  text-align: left;
+  width: 100%;
+}
+
+.guest-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.guest-item button {
+  padding: 4px;
+  min-width: 0;
+}
+
+/* Add space between buttons */
+.form button {
+  margin-top: 10px;
+}
+
+/* Add space between input fields */
+.form .MuiTextField-root {
+  margin-bottom: 10px;
+}
+
+.css-5lbw0b-MuiTypography-root {
+  margin-bottom: 5% !important;
 }

@@ -8,6 +8,8 @@ const AttendanceComponent = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [guestName, setGuestName] = useState('');
   const [guests, setGuests] = useState([]);
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [privateMessage, setPrivateMessage] = useState('');
   const [emailSent, setEmailSent] = useState(false);
 
 
@@ -15,6 +17,8 @@ const AttendanceComponent = () => {
     // Clear existing guest list and reset input fields
     setGuests([]);
     setGuestName('');
+    setPhoneNumber('');
+    setPrivateMessage('');
     setIsDialogOpen(true);
   };
 
@@ -24,12 +28,14 @@ const AttendanceComponent = () => {
 
   const handleRSVPSubmit = () => {
     const serviceId = "service_3o28gwi";
-    const templateId = "template_cd2v7ls";
+    const templateId = "template_ozdm3l9";
     const userId = "6dq3cOnzFTDbaZOC7";
 
     const templateParams = {
       guestName: guests.join(', '),
       numPeople: guests.length,
+      phoneNumber: phoneNumber, // Add the phone number field
+      privateMessage: privateMessage, // Add the private message field
     };
 
     emailjs
@@ -108,16 +114,33 @@ const AttendanceComponent = () => {
                   </div>
                 ))}
               </div>
-              <Button className="submit-button" variant="contained" onClick={handleRSVPSubmit} fullWidth disabled={isSubmitDisabled}>
-                Submit RSVP
-              </Button>
+              <TextField
+                label="Phone Number"
+                variant="outlined"
+                fullWidth
+                value={phoneNumber}
+                onChange={(e) => setPhoneNumber(e.target.value)}
+                className="input"
+              />
+
+              <TextField
+                label="Private Message"
+                variant="outlined"
+                fullWidth
+                multiline
+                rows={4}
+                value={privateMessage}
+                onChange={(e) => setPrivateMessage(e.target.value)}
+                className="input"
+              />
+
             </div>
           </Grid>
         </Grid>
         </DialogContent>
         <DialogActions>
           <Button onClick={closeDialog}>Cancel</Button>
-          <Button onClick={handleSubmit} variant='contained'>
+          <Button onClick={handleSubmit} disabled={isSubmitDisabled} variant='contained'>
             Submit RSVP
           </Button>
         </DialogActions>
