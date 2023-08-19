@@ -17,7 +17,9 @@ const HostedBy = ({ name }) => {
       {showConfetti && <Confetti />}
       <div className="component-title">Hosted By</div>
       <div className="component-text" onClick={handleClick}>
+        <div className='underline'>
         {name}
+        </div>
       </div>
     </div>
   );
