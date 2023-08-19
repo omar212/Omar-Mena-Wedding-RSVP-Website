@@ -1,4 +1,5 @@
 const GuestList = {
+  "omar elnagdy": 1,
   "doha harchan": 2,
   "yousra harchan": 2,
   "mohamed mostafa": 4,

@@ -15,14 +15,18 @@ const AttendanceComponent = () => {
   const [privateMessage, setPrivateMessage] = useState('');
   const [emailSent, setEmailSent] = useState(false);
   const [isMainGuestValid, setIsMainGuestValid] = useState(false); // New state for main guest validity
+  const [willAttend, setWillAttend] = useState(true);
 
-  const openDialog = () => {
+  const phoneNumberRegex = /^\d{10}$/;
+
+  const openDialog = (willAttend) => {
     setMainGuestName('');
     setAdditionalGuestNames([]);
     setPhoneNumber('');
     setPrivateMessage('');
     setIsMainGuestValid(false); // Clear main guest validity
     setEmailSent(false);
+    setWillAttend(willAttend);
     setIsDialogOpen(true);
   };
 
@@ -40,6 +44,7 @@ const AttendanceComponent = () => {
       numPeople: 1 + additionalGuestNames.length,
       phoneNumber: phoneNumber,
       privateMessage: privateMessage,
+      willAttend: willAttend ? "Will Attend" : "Will Not Attend", // Add the prop here
     };
 
     // Sending email using emailjs
@@ -67,23 +72,25 @@ const AttendanceComponent = () => {
     setAdditionalGuestNames(updatedGuests);
   };
 
+  
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (isMainGuestValid) {
+    if (isMainGuestValid && phoneNumber.trim() !== '' && phoneNumber.match(phoneNumberRegex)) {
       handleRSVPSubmit();
       closeDialog();
     }
   };
 
-  const isSubmitDisabled = mainGuestName === '' || additionalGuestNames.some(name => name.trim() === '');
+  const isSubmitDisabled = mainGuestName === '' || additionalGuestNames.some(name => name.trim() === '') || phoneNumber.trim() === '' || !phoneNumber.match(phoneNumberRegex); // Disable if phone number is not provided
 
   return (
     <div className='attendance-component'>
       <div className='button-container'>
-        <button className='attend-button' onClick={openDialog}>
+        <button className='attend-button' onClick={() => openDialog(true)}>
           Will Attend
         </button>
-        <button className='not-attend-button' onClick={openDialog}>
+        <button className='not-attend-button' onClick={() => openDialog(false)}>
           Will Not Attend
         </button>
       </div>
@@ -153,6 +160,7 @@ const AttendanceComponent = () => {
                 </div>
                 <TextField
                   label="Phone Number"
+                  placeholder='1234567890'
                   variant="outlined"
                   fullWidth
                   value={phoneNumber}
