@@ -88,8 +88,8 @@ const AttendanceComponent = () => {
         </button>
       </div>
       <Dialog className='modal' open={isDialogOpen} onClose={closeDialog}>
-        <DialogTitle>RSVP</DialogTitle>
-        <DialogContent>
+        <DialogTitle className='rsvp-container rsvp-title'>RSVP</DialogTitle>
+        <DialogContent className='rsvp-container'>
           <Grid container justifyContent="center">
             <Grid>
               <div className="form">
@@ -105,7 +105,7 @@ const AttendanceComponent = () => {
                     setIsMainGuestValid(GuestList.hasOwnProperty(name.toLowerCase())); // Convert to lowercase
                   }}
                   fullWidth
-                  className="input"
+                  className="main-guest-input"
                 />
                 {/* Display the check or X icon based on validity */}
                 <div className="verify-main-guest-icon">
@@ -173,7 +173,7 @@ const AttendanceComponent = () => {
             </Grid>
           </Grid>
         </DialogContent>
-        <DialogActions>
+        <DialogActions className='rsvp-container'>
           <Button onClick={closeDialog}>Cancel</Button>
           <Button onClick={handleSubmit} disabled={isSubmitDisabled} variant='contained'>
             Submit RSVP

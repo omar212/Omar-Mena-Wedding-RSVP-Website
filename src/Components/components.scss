@@ -203,14 +203,13 @@
   
 }
 
-.css-bdhsul-MuiTypography-root-MuiDialogTitle-root {
+.rsvp-title {
   font-family: 'WeddingHeader', sans-serif !important;
-  font-size: 2re !important;
+  font-size: 1.5rem !important;
   font-weight: 100 !important;
   margin-bottom: 1.5rem; /* Adjust margin to bring title closer to text */
 }
 
-.css-1t1j96h-MuiPaper-root-MuiDialog-paper
 
 .verify-main-guest-container {
   display: flex;
@@ -226,8 +225,8 @@
 }
 
 
-.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
-  height: fit-content;
+.rsvp-container {
+  height: fit-content !important;
   background-color: #FAF0E6 !important; 
 }
 
@@ -263,15 +262,19 @@
   margin-bottom: 10px;
 }
 
-.css-5lbw0b-MuiTypography-root {
-  margin-bottom: 5% !important;
-}
 
-.css-ypiqx9-MuiDialogContent-root {
+.main-guest-input {
   overflow-y: hidden !important;
 }
 
-.MuiDialogTitle-root+.css-ypiqx9-MuiDialogContent-root {
+.MuiDialogContent-root {
+  overflow-y: hidden !important;
+}
+.MuiDialogTitle-root+.MuiDialogContent-root {
   padding:  20px 24px !important; 
+}
+
+.MuiTypography-root {
+  // margin-bottom: 5% !important;
 }
 
