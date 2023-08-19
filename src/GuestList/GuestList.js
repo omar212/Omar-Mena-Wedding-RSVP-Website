@@ -1,6 +1,6 @@
 // guestList.js
 const GuestList = {
-    "Mena Elkafafi": 4,
+    "mena elkafafi": 4,
     "omar elnagdy": 3,
   };
   
