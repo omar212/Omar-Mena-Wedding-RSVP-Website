@@ -14,9 +14,9 @@ const Address = ({ location, address, city, actual }) => {
         <div className="component-text">
             {/* <FaMapMarkerAlt className="map-icon" />  */}
             <div>
-              <p>{location}</p>
-              <p>{address}</p>
-              <p>{city}</p>
+              <p className='underline'>{location}</p>
+              <p className='underline'>{address}</p>
+              <p className='underline'>{city}</p>
             </div>
         </div>
     </div>

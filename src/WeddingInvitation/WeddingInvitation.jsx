@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Invitation from '../assets/Invitation.png'
+import Invitation from '../assets/invitation.png'
 import './WeddingInvitation.scss'; // Import the corresponding CSS file for styling
 
 const WeddingInvitation = () => {

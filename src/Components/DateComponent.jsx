@@ -8,8 +8,8 @@ const DateComponent = ({ dateTitle, time, dateText, date, startTime, endTime }) 
     <div className='date-container'>
         <div className="component-title">Date</div>
         <div className="component-text">
-          <p>{dateTitle}</p>
-          <p>{time}</p>
+          <p className='underline'>{dateTitle}</p>
+          <p className='underline'>{time}</p>
         </div>
         <AddToCalendarButton
           name="Omar & Mena Katb Kitab"
