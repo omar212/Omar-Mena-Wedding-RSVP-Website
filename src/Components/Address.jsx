@@ -13,11 +13,11 @@ const Address = ({ location, address, city, actual }) => {
         <div className="component-title">Address</div>
         <div className="component-text">
             {/* <FaMapMarkerAlt className="map-icon" />  */}
-            <div>
-              <p className='underline'>{location}</p>
-              <p className='underline'>{address}</p>
-              <p className='underline'>{city}</p>
-            </div>
+              <div className='underline'>{location}</div>
+              <br />
+              <div className='underline'>{address}</div>
+              <br />
+              <div className='underline'>{city}</div>
         </div>
     </div>
   );
