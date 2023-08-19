@@ -92,6 +92,10 @@
           width: 50%;
           border: 2px solid black;
           cursor: pointer;
+
+          &:hover {
+            opacity: 0.5;
+          }
         }
     
     }
@@ -207,6 +211,8 @@
       }
       .custom-date {
         margin-top:0;
+        
+        
       }
       
     }
