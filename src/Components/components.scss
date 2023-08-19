@@ -67,17 +67,6 @@
 
     }
 
-    // .date-container {
-    //   display: flex;
-    //   flex-direction: column;
-    //   justify-content: center;
-    //   align-items: center;
-
-    //   @media (max-width: 768px) {
-    //     width: 100%;
-    //   }
-    // }
-
     .attendance-component {
 
         .form {
@@ -88,11 +77,8 @@
           height: 100%;
           align-items: center;
           margin-top: 10px;
-          
         }
-        
-        
-
+      
       .attend-button,
         .not-attend-button {
           padding: 10px 20px;
@@ -217,9 +203,32 @@
   
 }
 
+.css-bdhsul-MuiTypography-root-MuiDialogTitle-root {
+  font-family: 'WeddingHeader', sans-serif !important;
+  font-size: 2re !important;
+  font-weight: 100 !important;
+  margin-bottom: 1.5rem; /* Adjust margin to bring title closer to text */
+}
+
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper
+
+.verify-main-guest-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.verify-main-guest-icon {
+  // width: 100%;
+  // height: 50px;
+  margin-left: 20px;
+}
+
 
 .css-1t1j96h-MuiPaper-root-MuiDialog-paper {
   height: fit-content;
+  background-color: #FAF0E6 !important; 
 }
 
 /* Add space between each guest item */
@@ -257,3 +266,12 @@
 .css-5lbw0b-MuiTypography-root {
   margin-bottom: 5% !important;
 }
+
+.css-ypiqx9-MuiDialogContent-root {
+  overflow-y: hidden !important;
+}
+
+.MuiDialogTitle-root+.css-ypiqx9-MuiDialogContent-root {
+  padding:  20px 24px !important; 
+}
+
