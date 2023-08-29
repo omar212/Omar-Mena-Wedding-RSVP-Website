@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import WeddingRSVP from "./NewWeddingRSVP/WeddingRSVP";
+import WeddingRSVP from "./WeddingRSVP/WeddingRSVP";
 import KatbRSVP  from "./KatbRSVP/KatbRSVP";
 import BridalShowerRSVP from "./BridalShower/BridalShower";
 import WeddingInvitation from "./WeddingInvitation/WeddingInvitation";

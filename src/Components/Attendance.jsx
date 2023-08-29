@@ -82,7 +82,12 @@ const AttendanceComponent = () => {
     }
   };
 
-  const isSubmitDisabled = mainGuestName === '' || additionalGuestNames.some(name => name.trim() === '') || phoneNumber.trim() === '' || !phoneNumber.match(phoneNumberRegex); // Disable if phone number is not provided
+  const isSubmitDisabled = 
+  mainGuestName === '' || 
+  additionalGuestNames.some(name => name.trim() === '') || 
+  phoneNumber.trim() === '' || 
+  !phoneNumber.match(phoneNumberRegex) ||
+  additionalGuestNames.length !== GuestList[mainGuestName.toLowerCase()]; // Disable if phone number is not provided
 
   return (
     <div className='attendance-component'>

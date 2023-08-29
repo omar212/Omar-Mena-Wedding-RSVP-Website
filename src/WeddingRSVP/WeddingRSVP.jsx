@@ -1,132 +1,36 @@
-import React, { useState } from "react";
-import { TextField, Button, Typography, IconButton, Grid } from "@mui/material";
-import DeleteIcon from "@mui/icons-material/Delete";
-import emailjs from "emailjs-com";
-import "./WeddingRSVP.css";
+// KatbRSVP.jsx
+import React from 'react';
+import HostedBy from '../Components/HostedBy';
+import DateComponent from '../Components/DateComponent';
+import Address from '../Components/Address';
+import Title from '../Components/Title';
+import Attendance from '../Components/Attendance';
+import fancyline2 from '../assets/fancyline2.png';
+import './WeddingRSVP.scss'; // Import your global styles here
 
 const WeddingRSVP = () => {
-  const [guestName, setGuestName] = useState("");
-  const [guests, setGuests] = useState([]);
-  const [emailSent, setEmailSent] = useState(false);
-  const [showForm, setShowForm] = useState(true);
-
-  const handleRSVPSubmit = () => {
-  const serviceId = "service_3o28gwi";
-  const templateId = "template_ozdm3l9";
-  const userId = "6dq3cOnzFTDbaZOC7";
-
-    const templateParams = {
-      guestName: guests.join(", "),
-      numPeople: guests?.length,
-    };
-
-    emailjs
-      .send(serviceId, templateId, templateParams, userId)
-      .then((response) => {
-        console.log("Email sent successfully!", response);
-        setEmailSent(true);
-      })
-      .catch((error) => {
-        console.error("Email sending failed:", error);
-      });
-  };
-
-  const handleAddGuest = () => {
-    if (guestName.trim() !== "") {
-      setGuests([...guests, guestName.trim()]);
-      setGuestName("");
-    }
-  };
-
-  const handleRemoveGuest = (index) => {
-    const updatedGuests = [...guests];
-    updatedGuests.splice(index, 1);
-    setGuests(updatedGuests);
-  };
-
-  const handleMissedGuest = () => {
-    setShowForm(true);
-    setEmailSent(false);
-    setGuestName("");
-    setGuests([]);
-  };
-
-  const isSubmitDisabled = guests.length === 0;
-
   return (
-    <div>
-      {
-        !emailSent && (
-          <Typography  variant="h4">
-          <span className="title">
-          Omar & Mena's Wedding RSVP <br/>
-          </span>
-          </Typography>
-        )
-      }
-      
-      {emailSent ? (
-        <div>
-        <Typography className="success-message" variant="subtitle1">
-          <span className="title">
-            Thank you! <br /> Your RSVP has been sent successfully!
-            See you at the wedding! <br />
-            The Tides Estate <br /> 01/21/2024 <br /> 5pm
-          </span>
-        </Typography>
-        <Button variant="outlined" onClick={handleMissedGuest}>
-            Missed a Guest ?
-          </Button>
-        
+    <div className="full-container wedding-component">
+      <div className="component-container vertical">
+          <Title title="Omar & Mena Wedding" />
+          <Attendance />
         </div>
-      ) : (
-        <Grid container justifyContent="center">
-          <Grid>
-            <div className="form">
-              <TextField
-                label="Guest Name"
-                variant="outlined"
-                value={guestName}
-                onChange={(e) => setGuestName(e.target.value)}
-                fullWidth
-                className="input"
-              />
-              <Button style={{backgroundColor: "green"}}className="add-button" variant="contained" onClick={handleAddGuest} fullWidth>
-                Add Guest
-              </Button>
-              <div className="guest-list">
-                {guests.map((guest, index) => (
-                  <div key={index} className="guest-item">
-                    <Typography variant="body1">{guest}</Typography>
-                    <IconButton
-                      aria-label="remove"
-                      color="secondary"
-                      onClick={() => handleRemoveGuest(index)}
-                    >
-                      <DeleteIcon style={{fill: "red"}}/>
-                    </IconButton>
-                  </div>
-                ))}
-              </div>
-              <Button className="submit-button" variant="contained" onClick={handleRSVPSubmit} fullWidth disabled={isSubmitDisabled}>
-                Submit RSVP
-              </Button>
-            </div>
-          </Grid>
-        </Grid>
-      )}
+      <div className="component-container">
+        <div className="component">
+          <HostedBy title="Hosted By" name="Elnagdy and Elkafafi Family" />
+        </div>
+        <div className="component">
+          <DateComponent title="Date" dateTitle="Sunday, January 21st 2024" time="5:00PM" dateText="Sunday, January 21st, 2024" date="2024-01-21" startTime="17:00" endTime="23:00" />
+        </div>
+        <div className="component">
+          <Address title="Address" location='The Tides Estate' address="1245 Belmont Ave" city='North Haledon, NJ 07508' actual='The Tides Estate, 1245 Belmont Ave, North Haledon, NJ 07508'/>
+        </div>
+      </div>
+      {/* <div className='image-container'>
+        <img src={fancyline2} alt="fancy line" className="fancy-line-image" />
+      </div> */}
     </div>
   );
 };
 
 export default WeddingRSVP;
-
-
-
-
-
-
-
-// const serviceId = "service_3o28gwi";
-//   const templateId = "template_ozdm3l9";
-//   const userId = "6dq3cOnzFTDbaZOC7";
