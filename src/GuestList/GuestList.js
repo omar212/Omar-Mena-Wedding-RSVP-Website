@@ -34,9 +34,9 @@ const GuestList = {
   "hannan fadl": 3,
   "kareem fadl": 3,
   "nada fadl": 3,
-  "amir fadl": 2,
-  "yasmin elkhashiry": 2,
-  "nadine elkhashiry": 2,
+  "amir fadl": 3,
+  "yasmin elkhashiry": 3,
+  "nadine elkhashiry": 3,
   "nada ahmed": 3,
   "hana ahmed": 3,
   "amr ahmed": 3,
@@ -145,6 +145,7 @@ const GuestList = {
   "jennah youssef": 1,
   "sadar khan": 1,
   "ali khan": 1,
+  "wafaa elkhashiry": 3,
   
 };
 
