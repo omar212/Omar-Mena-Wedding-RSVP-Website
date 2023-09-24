@@ -33,17 +33,17 @@
 body {
   margin: 0;
   font-family: 'Wedding';
-  /* margin-top: 1em; */
   margin-bottom: 1em;
-  /* background-color: #ffeaa7;
-  background-image: linear-gradient(315deg, #ffeaa7 0%, #000000 74%); */
   background-color: #FAF0E6;
-  /* background-image: linear-gradient(315deg, #f9d29d 0%, #ffd8cb 74%); */
-  /* Set body height to 100vh to take up the full viewport height */
-  height: 100vh;
+  background-image: url('./assets/omarmena.png');
+  background-size: cover;
+  background-position: center top; /* Adjust this line */
+  opacity: 0.8; /* Adjust the opacity as needed */
+  z-index: -1; /* Place it below the content */
+  height: 100%;
   width: 100%;
   overflow: hidden; /* Prevent default body scroll */
-  
+
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
   overflow: -moz-scrollbars-none; /* Hide scrollbar on Firefox */
