@@ -1,24 +1,42 @@
-import React, { useState } from 'react';
-import Confetti from 'react-confetti';
+/* eslint-disable react/prop-types */
+import { useEffect } from 'react';
+import { useReward } from 'react-rewards';
 import './components.scss';
 
 const HostedBy = ({ name }) => {
-  const [showConfetti, setShowConfetti] = useState(false);
+  const { reward: emojiReward } = useReward('emojiReward', 'emoji', {
+    lifetime: 300,
+    angle: 90,
+    decay: 0.89,
+    spread: 150,
+    zIndex: 9999,
+    startVelocity: 120,
+    elementCount: 300,
+    springAnimation: true,
+    type: 'emoji',
+    emoji: ['💜','🤍','💍','👰🏽‍♀️','💸'],
+  });
 
-  const handleClick = () => {
-    setShowConfetti(true);
-    setTimeout(() => {
-      setShowConfetti(false);
-    }, 3000); // Clear confetti after 3 seconds
+  const triggerEmojiReward = () => {
+    emojiReward(); // Trigger the emoji reward animation
   };
+
+  // Use useEffect to trigger the emojiReward when the component mounts
+  useEffect(() => {
+    triggerEmojiReward();
+  }, []);
 
   return (
     <div className='hosted-by-container'>
-      {showConfetti && <Confetti />}
       <div className="component-title">Hosted By</div>
-      <div className="component-text" onClick={handleClick}>
+      <div
+        className="component-text"
+        style={{ width: '100%', height: '100%' }}
+        id="emojiReward"
+        onClick={triggerEmojiReward}
+      >
         <div className='underline'>
-        {name}
+          {name}
         </div>
       </div>
     </div>
