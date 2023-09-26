@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import { useEffect } from 'react';
 import { useReward } from 'react-rewards';
 import './components.scss';
 
@@ -20,11 +19,6 @@ const HostedBy = ({ name }) => {
   const triggerEmojiReward = () => {
     emojiReward(); // Trigger the emoji reward animation
   };
-
-  // Use useEffect to trigger the emojiReward when the component mounts
-  useEffect(() => {
-    triggerEmojiReward();
-  }, []);
 
   return (
     <div className='hosted-by-container'>

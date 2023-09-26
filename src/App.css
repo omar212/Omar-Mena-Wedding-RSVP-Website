@@ -38,7 +38,7 @@ body {
   background-image: url('./assets/omarmena.png');
   background-size: cover;
   background-position: center top; /* Adjust this line */
-  opacity: 0.8; /* Adjust the opacity as needed */
+  opacity: .9; /* Adjust the opacity as needed */
   z-index: -1; /* Place it below the content */
   height: 100%;
   width: 100%;

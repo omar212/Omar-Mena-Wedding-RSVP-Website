@@ -25,12 +25,9 @@ const DateComponent = ({ dateTitle, time, startTime, endTime }) => {
          endTime={endTime}
          timeZone="America/New_York"
          location="The Tides Estate 1245 Belmont Ave, North Haledon, NJ 07508"
-         description="Omar & Mena's Wedding"
-         hideTextLabelButton
-         options="'Apple','Google','iCal','Outlook.com','Yahoo'"
+         description="Omar & Mena's Wedding" 
+         options="'Apple','Google','iCal','Outlook.com'"
          label="Add to Calendar"
-         buttonsList
-         buttonStyle="round"
          iCalFileName="Reminder-Event"
          lightMode="bodyScheme"
          alarm={reminder}
