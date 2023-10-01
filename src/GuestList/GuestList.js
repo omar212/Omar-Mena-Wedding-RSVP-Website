@@ -24,7 +24,7 @@ const GuestList = {
   "dori rexha": 1,
   "hicham derdari": 0,
   "emil sours": 0,
-  "ayden's mom": 0,
+  "Iman Doleh": 0,
   "mustafa shihadeh": 0,
   "doha harchan": 1,
   "yousra harchan": 1,
