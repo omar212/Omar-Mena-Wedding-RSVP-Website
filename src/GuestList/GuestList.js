@@ -156,6 +156,7 @@ const GuestList = {
   "jennah youssef": 1,
   "sadar khan": 1,
   "ali khan": 1,
+  "taby omar": 1,
   
 };
 
