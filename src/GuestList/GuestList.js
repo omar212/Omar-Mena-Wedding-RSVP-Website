@@ -136,7 +136,7 @@ const GuestList = {
   "mahd sharif": 3,
   "maaz sharif": 3,
   "mama sharif": 3,
-  "dalia shoukry": 1,
+  "dalia shaker": 1,
   "ihab shoukry": 1,
   "fatima ghoulshi": 2,
   "alarabi ghoulshi": 2,
