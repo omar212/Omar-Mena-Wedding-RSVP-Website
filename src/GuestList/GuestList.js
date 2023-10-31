@@ -138,6 +138,8 @@ const GuestList = {
   "mama sharif": 3,
   "dalia shaker": 1,
   "ihab shoukry": 1,
+  "issam omar": 1,
+  "tabatha omar": 1,
   "fatima ghoulshi": 2,
   "alarabi ghoulshi": 2,
   "ayman ghoulshi": 2,
