@@ -1,5 +1,5 @@
----
-title: "Personal Wedding RSVP Website"
+
+"Personal Wedding RSVP Website"
 ---
 
 Celebrate your love story with a touch of modern elegance using this personalized Wedding RSVP Website, meticulously crafted with React, Material UI, and EmailJS. This project is a testament to the union of technology and romance, offering an intuitive platform for your guests to respond to your wedding invitation seamlessly.
